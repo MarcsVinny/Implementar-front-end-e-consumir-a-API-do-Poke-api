@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéDex - Marcos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>PokéDex</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Pesquisar Pokémon pelo nome...">
+                <button id="search-button">Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Container onde os cards serão renderizados -->
+        <div id="pokemon-list" class="pokemon-grid">
+            <!-- Os cards serão inseridos aqui pelo JavaScript -->
+        </div>
+
+        <!-- Mensagem de erro caso a busca não encontre nada -->
+        <div id="error-message" class="error-message hidden">
+            Pokémon não encontrado. Tente novamente!
+        </div>
+
+        <!-- Seção de Paginação -->
+        <div class="pagination">
+            <button id="prev-btn" disabled>Anterior</button>
+            <span id="page-info">Página 1</span>
+            <button id="next-btn">Próximo</button>
+        </div>
+    </main>
+
+    <!-- Modal de Detalhes -->
+    <div id="pokemon-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="pokemon-details">
+                <!-- Informações detalhadas aqui -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
